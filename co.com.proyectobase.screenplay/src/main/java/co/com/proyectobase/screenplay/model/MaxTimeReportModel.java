@@ -7,7 +7,7 @@ public class MaxTimeReportModel {
 	private String hour_type;
 	private String service;
 	private String activity;
-	private String excetuted_hours;
+	private String executed_hours;
 	private String comment;
 	
 	public String getClient_code() {
@@ -27,7 +27,7 @@ public class MaxTimeReportModel {
 	}
 
 	public String getService() {
-		return service;
+		return service.replace("\"", "");
 	}
 
 	public void setService(String service) {
@@ -42,12 +42,12 @@ public class MaxTimeReportModel {
 		this.activity = activity;
 	}
 
-	public String getExcetuted_hours() {
-		return excetuted_hours;
+	public String getExecuted_hours() {
+		return executed_hours;
 	}
 
-	public void setExcetuted_hours(String excetuted_hours) {
-		this.excetuted_hours = excetuted_hours;
+	public void setExecuted_hours(String executed_hours) {
+		this.executed_hours = executed_hours;
 	}
 
 	public String getComment() {

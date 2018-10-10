@@ -13,6 +13,8 @@ public class MaxTimeHomePage extends PageObject {
 			By.xpath("//*[@id=\"Vertical_v1_LE_v2_col1\"]/table/tbody/tr/td[2]/img"));	
 	public static final Target DAY_TO_CLOSE = Target.the("Day to close").located(
 			By.xpath("//*[@id=\"Vertical_v1_LE_v2_cell0_0_xaf_Fecha\"]/tbody/tr/td"));
+	public static final Target SECOND_DAY_TO_CLOSE = Target.the("Second day to close").located(
+			By.xpath("//*[@id=\"Vertical_v1_LE_v2_cell1_0_xaf_Fecha\"]/tbody/tr/td"));
 	
 	//*[@id="Vertical_v1_LE_v2_cell0_0_xaf_Fecha\"]/tbody/tr/td
 	//*[@id="Vertical_v1_LE_v2_cell1_0_xaf_Fecha"]/tbody/tr/td
