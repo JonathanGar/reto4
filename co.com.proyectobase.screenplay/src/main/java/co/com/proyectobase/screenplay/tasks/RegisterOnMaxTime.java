@@ -34,7 +34,7 @@ public class RegisterOnMaxTime implements Task {
 	public <T extends Actor> void performAs(T actor) {
 		// actor.wait(5000);
 		// actor.attemptsTo(WaitUntil.the(MaxTimeHomePage.LU_TIME_REPORT, isEnabled()));						
-		actor.attemptsTo(Wait.inSeconds(20));
+		actor.attemptsTo(Wait.inSeconds(23));
 		actor.attemptsTo(Click.on(MaxTimeHomePage.LU_TIME_REPORT));
 		actor.attemptsTo(Click.on(MaxTimeHomePage.IMG_ANALYSTS_LIST));
 		actor.attemptsTo(Click.on(MaxTimeHomePage.get_analyst_username_opt(this.maxTimeReportData.get(0).getReport_user())));
@@ -69,7 +69,7 @@ public class RegisterOnMaxTime implements Task {
 				Enter.theValue(maxTimeReportData.getClient_code())
 				.into(MaxTimeDayReport.INPUT_SEARCH_IFRAME).thenHit(Keys.ENTER)				
 		);
-		actor.attemptsTo(Wait.inSeconds(2));
+		actor.attemptsTo(Wait.inSeconds(4));
 		actor.attemptsTo(
 				WaitUntil.the(MaxTimeDayReport.get_project_cell_by_client_code(maxTimeReportData.getClient_code()), isEnabled()),
 				Click.on(MaxTimeDayReport.get_project_cell_by_client_code(maxTimeReportData.getClient_code())
