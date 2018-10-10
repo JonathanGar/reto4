@@ -69,7 +69,7 @@ public class RegisterOnMaxTime implements Task {
 				Enter.theValue(maxTimeReportData.getClient_code())
 				.into(MaxTimeDayReport.INPUT_SEARCH_IFRAME).thenHit(Keys.ENTER)				
 		);
-		actor.attemptsTo(Wait.inSeconds(4));
+		actor.attemptsTo(Wait.inSeconds(6));
 		actor.attemptsTo(
 				WaitUntil.the(MaxTimeDayReport.get_project_cell_by_client_code(maxTimeReportData.getClient_code()), isEnabled()),
 				Click.on(MaxTimeDayReport.get_project_cell_by_client_code(maxTimeReportData.getClient_code())
