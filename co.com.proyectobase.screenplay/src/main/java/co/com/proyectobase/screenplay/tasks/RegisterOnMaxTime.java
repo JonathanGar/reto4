@@ -53,7 +53,7 @@ public class RegisterOnMaxTime implements Task {
 			
 	private void do_report_half_day(Actor actor, MaxTimeReportModel maxTimeReportData) {
 		
-		actor.attemptsTo(Wait.inSeconds(2));
+		actor.attemptsTo(Wait.inSeconds(4));
 		actor.attemptsTo(
 				WaitUntil.the(MaxTimeDayReport.LINK_NEW, isEnabled()),
 				Click.on(MaxTimeDayReport.LINK_NEW)
